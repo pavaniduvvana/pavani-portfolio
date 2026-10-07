@@ -1,0 +1,2284 @@
+/* =========================================
+   PAVANI.OS - GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #070b10;
+    --panel: #0d131b;
+    --panel-light: #111a24;
+    --border: #1d2a38;
+
+    --text: #e6edf3;
+    --muted: #8996a5;
+
+    --green: #53e38c;
+    --blue: #66b7ff;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    background: var(--background);
+    color: var(--text);
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* Background Grid */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.4) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.4) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar {
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(7, 11, 16, 0.9);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Logo */
+
+.logo {
+
+    font-family: monospace;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.logo-box {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #355044;
+
+    color: var(--green);
+
+    font-size: 15px;
+}
+
+
+.version {
+
+    color: #586879;
+
+    font-weight: normal;
+
+    font-size: 11px;
+
+    letter-spacing: 0;
+}
+
+
+/* System status */
+
+.system-status {
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    display: inline-block;
+
+    margin-right: 7px;
+
+    box-shadow: 0 0 12px var(--green);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 90px 30px 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Available status */
+
+.online-status {
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    color: var(--green);
+
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Hello */
+
+.hello {
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #758597;
+
+    margin-bottom: 15px;
+}
+
+
+/* Name */
+
+.hero h1 {
+
+    font-size: clamp(70px, 10vw, 125px);
+
+    line-height: 0.85;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+
+    color: var(--green);
+}
+
+
+/* Role */
+
+.hero h2 {
+
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    font-weight: normal;
+
+    color: #b7c2cd;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h2 strong {
+
+    color: var(--text);
+}
+
+
+/* Description */
+
+.description {
+
+    max-width: 620px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+    padding: 12px 17px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.primary-btn {
+
+    background: var(--green);
+
+    color: #061009;
+
+    border: 1px solid var(--green);
+
+    font-weight: bold;
+}
+
+
+.primary-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 30px rgba(83, 227, 140, 0.2);
+}
+
+
+.secondary-btn {
+
+    background: #0c1219;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+
+
+.secondary-btn:hover {
+
+    border-color: #3b5368;
+}
+
+
+/* =========================================
+   TERMINAL
+========================================= */
+
+.terminal {
+
+    background: #090e14;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Terminal Header */
+
+.terminal-header {
+
+    height: 40px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    color: #8391a0;
+}
+
+
+.terminal-online {
+
+    color: var(--green);
+
+    text-shadow: 0 0 10px var(--green);
+}
+
+
+/* Terminal content */
+
+.terminal-body {
+
+    padding: 20px;
+
+    min-height: 290px;
+
+    font-family: monospace;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+.green {
+
+    color: var(--green);
+}
+
+
+.blue {
+
+    color: var(--blue);
+}
+
+
+.terminal-output {
+
+    color: var(--muted);
+
+    margin-bottom: 8px;
+}
+
+
+.success {
+
+    color: #bcefd0;
+}
+
+
+.cursor {
+
+    animation: blink 1s infinite;
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================
+   QUICK STATS
+========================================= */
+
+.quick-stats {
+
+    max-width: 1180px;
+
+    margin: 50px auto 80px;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.stat-card {
+
+    border: 1px solid var(--border);
+
+    background: rgba(13, 19, 27, 0.75);
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-radius: 7px;
+
+    transition: 0.2s;
+}
+
+
+.stat-card:hover {
+
+    border-color: #315344;
+
+    transform: translateY(-3px);
+}
+
+
+.stat-icon {
+
+    font-size: 20px;
+}
+
+
+.stat-card strong {
+
+    display: block;
+
+    font-family: monospace;
+
+    font-size: 13px;
+}
+
+
+.stat-card small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   BOTTOM DOCK
+========================================= */
+
+.dock {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 200;
+
+    display: flex;
+
+    gap: 5px;
+
+    padding: 7px;
+
+    background: rgba(13, 19, 27, 0.92);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.dock button {
+
+    width: 43px;
+
+    height: 43px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #718090;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+
+.dock button:hover {
+
+    background: #18232e;
+
+    color: var(--green);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    color: #445362;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    padding-bottom: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+    }
+
+
+    .quick-stats {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .topbar {
+
+        padding: 0 18px;
+    }
+
+
+    .system-status {
+
+        display: none;
+    }
+
+
+    .hero {
+
+        padding: 50px 18px 30px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 70px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 18px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .quick-stats {
+
+        grid-template-columns: 1fr;
+
+        padding: 0 18px;
+    }
+
+
+    .dock button {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+}
+
+/* =========================================
+   PAVANI.OS BOOT SCREEN
+========================================= */
+
+.boot-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: #05080c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: monospace;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+.boot-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.boot-content {
+    width: min(500px, 85%);
+
+    text-align: center;
+}
+
+
+.boot-logo {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+
+    color: #e6edf3;
+
+    margin-bottom: 25px;
+}
+
+
+.boot-logo span {
+    color: var(--green);
+}
+
+
+.boot-line {
+    color: #718090;
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+.boot-progress {
+    width: 100%;
+    height: 4px;
+
+    background: #16202b;
+
+    overflow: hidden;
+}
+
+
+#bootProgress {
+    width: 0%;
+    height: 100%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 15px var(--green);
+
+    transition: width 0.15s linear;
+}
+
+
+.boot-status {
+    color: var(--green);
+
+    font-size: 12px;
+
+    margin-top: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.main-os {
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+}
+
+
+.main-os.show {
+    opacity: 1;
+}
+
+/* =========================================
+   APPLICATION WINDOWS
+========================================= */
+
+.app-window {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.92);
+
+    width: min(850px, 90vw);
+    max-height: 80vh;
+
+    background: #0b1118;
+
+    border: 1px solid #263747;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.65);
+
+    overflow: hidden;
+
+    z-index: 500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.app-window.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+}
+
+
+/* WINDOW HEADER */
+
+.window-header {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    background: #101821;
+
+    border-bottom: 1px solid #1e2b38;
+
+}
+
+
+.window-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    color: #c8d2dc;
+
+}
+
+
+.window-icon {
+
+    font-size: 15px;
+
+}
+
+
+.window-close {
+
+    width: 28px;
+
+    height: 28px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #7d8b99;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.window-close:hover {
+
+    background: #2a1717;
+
+    color: #ff7777;
+
+}
+
+
+/* WINDOW CONTENT */
+
+.window-content {
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    max-height: calc(80vh - 48px);
+
+}
+
+
+.window-label {
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    color: var(--green);
+
+}
+
+
+.window-intro h2 {
+
+    font-size: 30px;
+
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.window-intro p {
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* PROJECT CARD */
+
+.project-card {
+
+    border: 1px solid #223241;
+
+    background: #0e151d;
+
+    border-radius: 8px;
+
+    padding: 22px;
+
+    margin-bottom: 14px;
+
+    transition: 0.2s;
+
+}
+
+
+.project-card:hover {
+
+    border-color: #365746;
+
+    transform: translateY(-2px);
+
+}
+
+
+.project-card-secondary {
+
+    background: #0c131a;
+
+}
+
+
+.portfolio-project {
+
+    border-style: dashed;
+
+}
+
+
+.project-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.project-number {
+
+    font-family: monospace;
+
+    color: #506170;
+
+    font-size: 11px;
+
+}
+
+
+.project-card h3 {
+
+    font-size: 20px;
+
+    margin-top: 5px;
+
+}
+
+
+.project-status {
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    color: var(--green);
+
+    border: 1px solid #294b39;
+
+    padding: 5px 7px;
+
+    border-radius: 4px;
+
+    white-space: nowrap;
+
+}
+
+
+.project-status.building {
+
+    color: #9db1c4;
+
+    border-color: #344555;
+
+}
+
+
+.project-description {
+
+    color: #8b9aa8;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 15px 0;
+
+    max-width: 700px;
+
+}
+
+
+/* TECH STACK */
+
+.tech-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.tech-stack span {
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: #9eafbd;
+
+    background: #131d27;
+
+    border: 1px solid #263644;
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+}
+
+
+/* PROJECT BUTTONS */
+
+.project-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+
+.project-btn {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    padding: 9px 13px;
+
+    border-radius: 5px;
+
+    background: var(--green);
+
+    color: #061009;
+
+    border: 1px solid var(--green);
+
+}
+
+
+.project-btn:hover {
+
+    box-shadow:
+        0 0 20px rgba(83, 227, 140, 0.15);
+
+}
+
+
+.secondary-project-btn {
+
+    background: transparent;
+
+    color: #aebbc7;
+
+    border-color: #344554;
+
+}
+
+
+.secondary-project-btn:hover {
+
+    border-color: #5a7083;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .app-window {
+
+        width: 94vw;
+
+        max-height: 85vh;
+
+    }
+
+
+    .window-content {
+
+        padding: 20px;
+
+    }
+
+
+    .project-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .project-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .project-btn {
+
+        text-align: center;
+
+    }
+
+}
+
+/* =========================================
+   ABOUT.EXE
+========================================= */
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin: 25px 0;
+
+}
+
+
+.profile-item {
+
+    background: #0e151d;
+
+    border: 1px solid #223241;
+
+    padding: 15px;
+
+    border-radius: 6px;
+
+}
+
+
+.profile-item span {
+
+    display: block;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    color: #657686;
+
+    margin-bottom: 7px;
+
+}
+
+
+.profile-item strong {
+
+    font-size: 13px;
+
+}
+
+
+.system-box,
+.mission-box {
+
+    background: #0e151d;
+
+    border: 1px solid #223241;
+
+    border-radius: 7px;
+
+    padding: 20px;
+
+    margin-top: 12px;
+
+}
+
+
+.box-label {
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    color: var(--green);
+
+}
+
+
+.system-box p {
+
+    color: #9aa8b5;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-top: 12px;
+
+}
+
+
+.mission-box p {
+
+    color: #a8b5c1;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================
+   SKILLS.EXE
+========================================= */
+
+.skills-intro {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 8px 0 22px;
+
+}
+
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.skill-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    background: #0e151d;
+
+    border: 1px solid #223241;
+
+    border-radius: 7px;
+
+    transition: 0.2s;
+
+}
+
+
+.skill-box:hover {
+
+    border-color: #365746;
+
+    transform: translateY(-2px);
+
+}
+
+
+.skill-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #131d27;
+
+    border: 1px solid #293b4b;
+
+    border-radius: 6px;
+
+    font-size: 18px;
+
+}
+
+
+.skill-box strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+
+.skill-box small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================
+   CONTACT.EXE
+========================================= */
+
+.contact-intro {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 10px 0 25px;
+
+}
+
+
+.contact-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.contact-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    background: #0e151d;
+
+    border: 1px solid #223241;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    transition: 0.2s;
+
+}
+
+
+.contact-item:hover {
+
+    border-color: #365746;
+
+    transform: translateX(3px);
+
+}
+
+
+.contact-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #131d27;
+
+    border: 1px solid #293b4b;
+
+    border-radius: 6px;
+
+    font-family: monospace;
+
+    font-weight: bold;
+
+}
+
+
+.contact-item div {
+
+    flex: 1;
+
+}
+
+
+.contact-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+}
+
+
+.contact-item small {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 4px;
+
+}
+
+
+.contact-arrow {
+
+    color: #657686;
+
+}
+
+
+.contact-terminal {
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    background: #080d12;
+
+    border: 1px solid #1d2a38;
+
+    border-radius: 6px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    color: var(--green);
+
+}
+
+
+.contact-command {
+
+    color: #8797a6;
+
+    margin-left: 8px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .profile-grid,
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ==========================================
+   INTERACTIVE TERMINAL
+   ========================================== */
+
+.terminal-body {
+    min-height: 220px;
+    padding: 20px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-y: auto;
+}
+
+.terminal-prompt {
+    color: #00ff9c;
+    font-weight: bold;
+}
+
+.terminal-command {
+    color: #00d9ff;
+}
+
+.terminal-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#terminalInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    caret-color: #00ff9c;
+}
+
+.terminal-response {
+    color: #b8c7d9;
+    margin-left: 5px;
+    margin-bottom: 8px;
+}
+
+.terminal-response strong {
+    color: #ff5c5c;
+}
+
+/* ==========================================
+   RESUME WINDOW
+   ========================================== */
+
+.resume-role {
+    color: #00d9ff;
+    margin-top: -8px;
+    margin-bottom: 24px;
+}
+
+.resume-summary {
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    background: rgba(0, 217, 255, 0.03);
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.resume-summary p {
+    color: #b8c7d9;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.resume-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.resume-info-box {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.resume-info-box span {
+    display: block;
+    font-size: 11px;
+    color: #718096;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.resume-info-box strong {
+    color: #ffffff;
+}
+
+.resume-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.resume-note {
+    display: flex;
+    gap: 10px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #718096;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resume-note span:first-child {
+    color: #00ff9c;
+}
+
+@media (max-width: 600px) {
+
+    .resume-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-note {
+        flex-direction: column;
+    }
+
+}
+
+/* ==========================================
+   WINDOW DRAGGING
+   ========================================== */
+
+.app-window {
+    cursor: default;
+}
+
+.window-header {
+    cursor: grab;
+    user-select: none;
+}
+
+.window-header:active {
+    cursor: grabbing;
+}
+
+.window-close {
+    cursor: pointer;
+}
+
+/* ==========================================
+   WINDOW CONTROLS
+   ========================================== */
+
+.window-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.window-controls button {
+    width: 30px;
+    height: 26px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: #9aa7b5;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.window-controls button:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffffff;
+}
+
+.window-controls .window-close:hover {
+    background: #ff4d5a;
+
+    color: white;
+
+    border-color: #ff4d5a;
+}
+
+
+/* ==========================================
+   MINIMIZED WINDOW
+   ========================================== */
+
+.app-window.minimized {
+    display: none;
+}
+
+
+/* ==========================================
+   MAXIMIZED WINDOW
+   ========================================== */
+
+.app-window.maximized {
+
+    left: 20px !important;
+    top: 70px !important;
+
+    width: calc(100vw - 40px) !important;
+
+    height: calc(100vh - 100px) !important;
+
+    transform: none !important;
+}
+
+.app-window.maximized .window-content {
+    height: calc(100% - 55px);
+
+    overflow-y: auto;
+}
+/* ==========================================
+   APP OPENING ANIMATION
+========================================== */
+
+.app-window.open {
+    animation: windowOpen 0.25s ease-out;
+}
+
+@keyframes windowOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* ==========================================
+   PAVANI.OS DOCK - ACTIVE STATES
+========================================== */
+
+.dock-item {
+    position: relative;
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.dock-item:hover {
+    transform: translateY(-6px);
+}
+
+/* Active app indicator */
+
+.dock-item.active::after {
+    content: "";
+    position: absolute;
+
+    bottom: -5px;
+    left: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #00ff9d;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 8px rgba(0, 255, 157, 0.8);
+}
+
+/* Minimized app indicator */
+
+.dock-item.minimized::after {
+    content: "";
+    position: absolute;
+
+    bottom: -5px;
+    left: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffaa00;
+
+    transform: translateX(-50%);
+}
+
+/* ==========================================
+   RECRUITER MODE
+========================================== */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.recruiter-btn {
+    padding: 8px 12px;
+    border: 1px solid #315344;
+    background: rgba(83, 227, 140, 0.06);
+    color: var(--green);
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.recruiter-btn:hover {
+    background: rgba(83, 227, 140, 0.14);
+    border-color: var(--green);
+    box-shadow: 0 0 18px rgba(83, 227, 140, 0.12);
+    transform: translateY(-1px);
+}
+
+.recruiter-window {
+    width: min(760px, 90vw);
+}
+
+.recruiter-intro {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 8px 0 22px;
+}
+
+.recruiter-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.recruiter-profile > div {
+    padding: 15px;
+    background: #0e151d;
+    border: 1px solid #223241;
+    border-radius: 7px;
+}
+
+.recruiter-label {
+    display: block;
+    font-family: monospace;
+    font-size: 9px;
+    color: #657686;
+    margin-bottom: 7px;
+}
+
+.recruiter-profile strong {
+    font-size: 13px;
+}
+
+.recruiter-section {
+    padding: 18px;
+    margin-bottom: 12px;
+    background: #0e151d;
+    border: 1px solid #223241;
+    border-radius: 7px;
+}
+
+.recruiter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.recruiter-tags span {
+    font-family: monospace;
+    font-size: 10px;
+    color: #9eafbd;
+    background: #131d27;
+    border: 1px solid #263644;
+    padding: 6px 9px;
+    border-radius: 4px;
+}
+
+.recruiter-project {
+    margin-top: 12px;
+}
+
+.recruiter-project strong {
+    font-size: 16px;
+}
+
+.recruiter-project p {
+    color: #8b9aa8;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 8px 0 12px;
+}
+
+.recruiter-project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.recruiter-project-links a {
+    color: var(--green);
+    font-family: monospace;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.recruiter-project-links a:hover {
+    text-decoration: underline;
+}
+
+.recruiter-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 18px 0;
+}
+
+.recruiter-terminal {
+    display: flex;
+    gap: 10px;
+    padding: 14px;
+    background: #080d12;
+    border: 1px solid #1d2a38;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--green);
+}
+
+.recruiter-terminal span:last-child {
+    color: #8797a6;
+}
+
+@media (max-width: 600px) {
+
+    .topbar-right {
+        gap: 0;
+    }
+
+    .recruiter-btn {
+        font-size: 9px;
+        padding: 7px 8px;
+    }
+
+    .topbar-right .system-status {
+        display: none;
+    }
+
+    .recruiter-profile {
+        grid-template-columns: 1fr;
+    }
+
+    .recruiter-actions {
+        flex-direction: column;
+    }
+
+    .recruiter-actions .project-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .recruiter-terminal {
+        flex-direction: column;
+    }
+}
+
+/* ============================= */
+/* RECRUITER MODE */
+/* ============================= */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.recruiter-btn {
+    padding: 8px 14px;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    background: rgba(83, 227, 140, 0.08);
+    color: var(--green);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.recruiter-btn:hover {
+    background: rgba(83, 227, 140, 0.18);
+    transform: translateY(-1px);
+}
+
+.recruiter-window {
+    width: 620px;
+    max-width: 90vw;
+    max-height: 80vh;
+}
+
+.recruiter-content {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.recruiter-intro {
+    margin-bottom: 24px;
+}
+
+.recruiter-intro h2 {
+    margin: 6px 0;
+    color: var(--text);
+    font-size: 26px;
+}
+
+.recruiter-intro p {
+    margin: 4px 0;
+    color: var(--muted);
+}
+
+.recruiter-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.recruiter-profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.recruiter-profile > div {
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel-light);
+}
+
+.recruiter-profile strong {
+    display: block;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.recruiter-section {
+    margin-bottom: 24px;
+}
+
+.recruiter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.recruiter-tags span {
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--panel-light);
+    color: var(--text);
+    font-size: 12px;
+}
+
+.recruiter-project {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--panel-light);
+}
+
+.recruiter-project h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+.recruiter-project p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+.recruiter-project-links {
+    display: flex;
+    gap: 16px;
+}
+
+.recruiter-project-links a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.recruiter-project-links a:hover {
+    text-decoration: underline;
+}
+
+.recruiter-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.recruiter-actions button {
+    padding: 9px 13px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--panel-light);
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.recruiter-actions button:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.recruiter-terminal {
+    padding: 12px;
+    border-radius: 6px;
+    background: #05080c;
+    color: var(--muted);
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.recruiter-terminal span {
+    color: var(--green);
+    margin-right: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .topbar-right {
+        gap: 8px;
+    }
+
+    .recruiter-btn {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .recruiter-profile {
+        grid-template-columns: 1fr;
+    }
+
+    .recruiter-window {
+        width: 92vw;
+    }
+
+}
